@@ -25,6 +25,7 @@
             </x:Array>
         </CollectionView.ItemsSource>
 
+
        <CollectionView.ItemTemplate>
            <DataTemplate x:DataType="model:Monkey">
                <HorizontalStackLayout Padding="10">
