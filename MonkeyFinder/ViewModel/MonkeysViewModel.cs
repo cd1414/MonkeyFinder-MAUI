@@ -3,6 +3,7 @@ using System.Diagnostics;
 using CommunityToolkit.Mvvm.Input;
 using MonkeyFinder.Model;
 using MonkeyFinder.Services;
+using MonkeyFinder.View;
 
 namespace MonkeyFinder.ViewModel
 {
@@ -45,6 +46,14 @@ namespace MonkeyFinder.ViewModel
             {
                 IsBusy = false;
             }
+        }
+
+        [RelayCommand]
+        async Task GoToDetailsAsync(Monkey monkey)
+        {
+            if (monkey is null) return;
+
+            await Shell.Current.GoToAsync($"{nameof(DetailsPage)}", true, new Dictionary<string, object> { { "Monkey", monkey } });
         }
     }
 }
