@@ -1,4 +1,4 @@
-﻿namespace MonkeyFinder;
+﻿namespace MonkeyFinder.View;
 
 public partial class MainPage : ContentPage
 {
