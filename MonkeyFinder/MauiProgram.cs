@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using MonkeyFinder.Services;
 using MonkeyFinder.ViewModel;
+using MonkeyFinder.View;
 
 namespace MonkeyFinder;
 
