@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Diagnostics;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using MonkeyFinder.Model;
 using MonkeyFinder.Services;
@@ -49,6 +50,7 @@ namespace MonkeyFinder.ViewModel
             finally
             {
                 IsBusy = false;
+                IsRefreshing = false;
             }
         }
 
@@ -94,6 +96,9 @@ namespace MonkeyFinder.ViewModel
                 await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
             }
         }
+
+        [ObservableProperty]
+        bool isRefreshing;
     }
 }
 
